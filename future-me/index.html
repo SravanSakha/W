@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Future Me</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Future Me</title>
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
 <audio id="bgm" autoplay loop>
-  <source src="assets/music.mp3" type="audio/mpeg">
+  <source src="./assets/music.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
- 
-<div class="screen" id="screen1">
-  <h1>🔮 Future Me</h1>
-  <button onclick="next()">Start</button>
-</div>
-<button onclick="toggleMusic()">🔊 Mute/Unmute</button>
-<div class="screen" id="screen2" style="display:none;">
-  <input id="name" placeholder="Your name">
-  <input id="goal" placeholder="Your dream">
-  <button onclick="generate()">Reveal Future</button>
+
+<!-- SCREEN 1: Welcome -->
+<div id="screen1" class="screen">
+  <h2>Welcome to Future Me</h2>
+  <input id="name" type="text" placeholder="Enter your name" />
+  <input id="goal" type="text" placeholder="Enter your future goal" />
+  <button onclick="next()">Reveal Future</button>
+  <button onclick="toggleMusic()">Mute/Unmute</button>
 </div>
 
-<div class="screen" id="screen3" style="display:none;">
+<!-- SCREEN 2: (optional) Loading -->
+<div id="screen2" class="screen" style="display:none;">
+  <h2>Generating your future...</h2>
+</div>
+
+<!-- SCREEN 3: Result -->
+<div id="screen3" class="screen" style="display:none;">
   <h2 id="result"></h2>
 </div>
 
-<script>
-const audio = document.getElementById("bgm");
-
-document.body.addEventListener("click", () => {
-  audio.muted = false;
-  audio.play();
-});
-</script>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Future Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="screen" id="screen1">
+  <h1>🔮 Future Me</h1>
+  <button onclick="next()">Start</button>
+</div>
+
+<div class="screen" id="screen2" style="display:none;">
+  <input id="name" placeholder="Your name">
+  <input id="goal" placeholder="Your dream">
+  <button onclick="generate()">Reveal Future</button>
+</div>
+
+<div class="screen" id="screen3" style="display:none;">
+  <h2 id="result"></h2>
+</div>
+
+<audio autoplay loop>
+  <source src="assets/music.mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

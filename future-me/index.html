@@ -6,6 +6,9 @@
 </head>
 
 <body>
+<audio id="bgm" autoplay loop muted>
+  <source src="assets/music.mp3">
+</audio>
  
 <div class="screen" id="screen1">
   <h1>🔮 Future Me</h1>
@@ -25,7 +28,11 @@
 <audio autoplay loop>
   <source src="assets/music.mp3">
 </audio>
-
+<script>
+document.body.addEventListener("click", () => {
+  document.getElementById("bgm").muted = false;
+});
+</script>
 <script src="script.js"></script>
 </body>
 </html>

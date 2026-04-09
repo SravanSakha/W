@@ -2,7 +2,14 @@ function next() {
   document.getElementById("screen1").style.display = "none";
   document.getElementById("screen2").style.display = "flex";
 }
-
+function toggleMusic() {
+  const bgm = document.getElementById("bgm");
+  if (bgm.paused) {
+    bgm.play();
+  } else {
+    bgm.pause();
+  }
+}
 function generate() {
   let name = document.getElementById("name").value;
   let goal = document.getElementById("goal").value;

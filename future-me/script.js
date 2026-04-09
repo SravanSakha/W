@@ -17,7 +17,7 @@ function next() {
 
 // Generate the future message
 function generate(name, goal) {
-  let year = Math.floor(Math.random() * (2030 - 2025 + 1)) + 2025;
+  let year = Math.floor(Math.random() * (2030 - 2026 + 1)) + 2026;
   let result = `${name}, in ${year} you became a successful ${goal}!`;
 
   document.getElementById("screen2").style.display = "none";

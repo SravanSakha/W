@@ -2,34 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Future Me</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- Background music -->
 <audio id="bgm" autoplay loop>
   <source src="./assets/music.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
-<!-- SCREEN 1: Welcome -->
+<!-- SCREEN 1: Welcome / Input -->
 <div id="screen1" class="screen">
-  <h2>Welcome to Future Me</h2>
+  <h1>🔮 Future Me</h1>
   <input id="name" type="text" placeholder="Enter your name" />
   <input id="goal" type="text" placeholder="Enter your future goal" />
   <button onclick="next()">Reveal Future</button>
-  <button onclick="toggleMusic()">Mute/Unmute</button>
+  <button onclick="toggleMusic()">🔊 Mute/Unmute</button>
 </div>
 
-<!-- SCREEN 2: (optional) Loading -->
+<!-- SCREEN 2: Loading -->
 <div id="screen2" class="screen" style="display:none;">
   <h2>Generating your future...</h2>
+  <div class="loader"></div>
 </div>
 
 <!-- SCREEN 3: Result -->
 <div id="screen3" class="screen" style="display:none;">
   <h2 id="result"></h2>
+  <button onclick="restart()">Try Again</button>
 </div>
 
 <script src="script.js"></script>
